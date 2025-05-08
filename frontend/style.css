@@ -1,0 +1,247 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body centralizado */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    max-width: auto;
+    width: 100%;
+}
+
+.logo {
+    max-width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+
+/* Container principal */
+.container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* Título */
+h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* Formulário de adicionar tarefa */
+.form-container {
+    margin-bottom: 30px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    margin-bottom: 16px;
+}
+
+input[type="text"]:focus {
+    border: 1px solid #db3434;
+    outline: none;
+}
+
+/* Botão de adicionar */
+.adicionar-btn {
+    width: 100%;
+    padding: 14px;
+    background-color: #b40d0d;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.adicionar-btn:hover {
+    background-color: #f19d00;
+    transform: translateY(-3px);
+}
+
+/* Lista de tarefas */
+.tarefas-list {
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.tarefas-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.tarefas-list li {
+    background-color: #ecf0f1;
+    padding: 15px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    word-break: break-word; 
+    flex-wrap: wrap; 
+}
+
+.tarefa-titulo {
+    flex: 1;
+    min-width: 0;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+.excluir-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    font-size: 18px;
+    width: 5.5rem;
+    height: auto;
+    border-radius: 6px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.edit-btn {
+    background-color: #12d600;
+    color: white;
+    border: none;
+    font-size: 18px;
+    width: 5.5rem;
+    height: auto;
+    border-radius: 6px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.excluir-btn:hover {
+    background-color: #c0392b;
+    transform: translateY(-3px);
+}
+
+/* Formulário de edição */
+.edit-form {
+    display: none;
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.tarefas-list h2 {  
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+/* Botões do formulário de edição */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.editar-btn, .cancelar-btn {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.editar-btn {
+    background-color: #27ae60;
+    color: white;
+}
+
+.editar-btn:hover {
+    background-color: #219150;
+}
+
+.cancelar-btn {
+    background-color: #bdc3c7;
+    color: white;
+}
+
+.cancelar-btn:hover {
+    background-color: #95a5a6;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    input[type="text"], .adicionar-btn {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    input[type="text"], .adicionar-btn {
+        font-size: 0.9rem;
+    }
+
+    .button-container {
+        flex-direction: column;
+    }
+
+    .button-container button {
+        width: 100%;
+    }
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestão de Tarefas</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      <img src="./img/novaera-logo-01.png" alt="Logo da Nova Era" class="logo">
+    </header>
+
+    <div class="container">
+      <h1>Gestão de Tarefas</h1>
+
+      <!-- Formulário para adicionar nova tarefa -->
+      <div class="form-container">
+        <input type="text" id="tituloTarefa" placeholder="Digite o título da tarefa" required>
+        <button id="adicionarTarefa" class="adicionar-btn">Adicionar Tarefa</button>
+      </div>
+
+      <!-- Lista de tarefas -->
+      <div class="tarefas-list">
+        <h2>Listagem</h2>
+        <ul id="tarefasList"></ul>
+      </div>
+
+      <div class="form-container edit-form" id="editarTarefaContainer">
+        <input type="text" id="tituloTarefaEdit" placeholder="Novo título da tarefa" required>
+        <div class="button-container">
+          <button id="atualizarTarefa" class="editar-btn">Atualizar</button>
+          <button id="cancelarEdicao" class="cancelar-btn">Cancelar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
